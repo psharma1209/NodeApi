@@ -1,0 +1,56 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.row-heading {
+  font-weight: 900;
+  text-align: center;
+  color: #00b7ff;
+}
+
+.header {
+  color: #00b7ff;
+  font-size: 2em;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.out-of-stock {
+  background-color: red;
+}
+
+.error {
+  color: red;
+  font-size: 20px;
+}
+
+.success {
+  color: green;
+  font-size: 20px;
+}
+.emptycart {
+  color: red;
+  font-size: 27px;
+}
+
+.deletemsg {
+  color: red;
+  font-size: 20px;
+}
+
+.title {
+  color: crimson;
+}
+
+.subtitle {
+  color: royalblue;
+}
+
+.navbarr {
+  background-color: bisque;
+}

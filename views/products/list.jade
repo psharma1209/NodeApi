@@ -1,0 +1,38 @@
+extends ../layout
+
+block content
+   if deletemsg
+      p.deletemsg=deletemsg
+   h1.header Products
+   table.table.table-bordered
+       tr.row-heading
+           td ID
+           td TITLE
+           td PRICE
+           td STOCK
+           td EDIT
+           td DELETE 
+           td ADD PRODUCT TO CART
+           
+        each product in products
+            tr
+                td=product.id
+                td=product.title
+                td=product.price
+                if(product.stock == 0)
+                    td NO STOCK
+                else
+                    if(product.quantity>0)
+                        td=product.stock-product.quantity 
+                    else
+                        td=product.stock   
+                td 
+                    a(href=`/products/edit/${product.id}`).btn.btn-success Edit 
+                td    
+                    a(href=`/products/del/${product.id}`).btn.btn-success Delete
+                if(product.stock == 0)
+                    td.btn.btn-success.btn-danger  AddProductToCart
+                else
+                    td
+                        a(href=`/products/addProduct/${product.id}`).btn.btn-success AddProductToCart    
+                

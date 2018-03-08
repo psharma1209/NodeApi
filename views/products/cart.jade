@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+   
+   h1.header Cart
+   if emptymsg
+       p.emptycart= emptymsg
+   table.table.table-bordered
+       tr.row-heading
+           td ID
+           td TITLE
+           td PRICE
+           td QUANTITY
+           td REMOVE 
+           
+        each cartitems in cart
+            tr
+                td=cartitems.id
+                td=cartitems.title
+                td=cartitems.price
+                td=cartitems.quantity    
+                td
+                    a(href=`/products/remove/${cartitems.id}`).btn.btn-primary Remove    
+                
+                

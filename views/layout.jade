@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    body
+        nav.navbar.navbar-default.navbarr
+            .container-fluid
+                .navbar-header
+                    a.navbar-brand(href='#') Fruit Store
+                ul.nav.navbar-nav
+                    li.dropdown
+                        a.dropdown-toggle(data-toggle='dropdown', href='#')
+                            | Products
+                            span.caret
+                        ul.dropdown-menu
+                            li
+                                a(href='/products') List
+                            li
+                                a(href='/products/add') Add
+                              
+                    li
+                        a(href='/products/cart') Cart  
+                    li
+                        a(href='/offers') Offers
+                    li
+                        a(href='/contact-us') Contact Us
+
+        block content
